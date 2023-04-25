@@ -10,8 +10,8 @@
 [2023-04-24 19:07:46] Chatroom: bob: so like 2 would be 2?
 [2023-04-24 19:07:51] Chatroom: alice: yeah
 [2023-04-24 19:07:53] Chatroom: bob: that didn't work
-[2023-04-24 19:08:01] Chatroom: alice: hmm kinda lame, wanna touch grass?
-[2023-04-24 19:08:11] Chatroom: bob: yeah this chat is boring me
+[2023-04-24 19:08:01] Chatroom: alice: hmm must be a different app, wanna touch grass?
+[2023-04-24 19:08:11] Chatroom: bob: yeah this is boring me
 [2023-04-24 19:08:16] Client ('127.0.0.1', 53922) disconnected.
 [2023-04-24 19:08:16] Chatroom: alice has left the chat.
 [2023-04-24 19:08:17] Client ('127.0.0.1', 53936) disconnected.
