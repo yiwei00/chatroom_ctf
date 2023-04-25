@@ -1,6 +1,7 @@
 import argparse
 import tempfile
 import os
+import signal
 from server import ChatServer
 from log4py import Log4py
 from datetime import datetime
@@ -28,15 +29,17 @@ def main(**kwargs):
     logger = Log4py(logpath)
     #endregion
     server = ChatServer(host=host, port=port, logger=logger)
+    signal.signal(signal.SIGINT, lambda sig, frame: server.stop())
+    signal.signal(signal.SIGTERM, lambda sig, frame: server.stop())
     server.run()
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-a', '--addr', type=str, default='0.0.0.0')
-    parser.add_argument('-p', '--port', type=int, default=5000)
-    parser.add_argument('-l', '--log', type=str, default= None)
-    parser.add_argument('--log-dir', type=str, default=tempfile.gettempdir())
+    parser.add_argument('-a', '--addr', type=str, default='0.0.0.0', help='listening address')
+    parser.add_argument('-p', '--port', type=int, default=5000, help='listening port')
+    parser.add_argument('-l', '--log', type=str, default= None, help='log file name, defaults to chatroom-YYYY-MM-DD.log')
+    parser.add_argument('--log-dir', type=str, default=tempfile.gettempdir(), help='directory to store log files, defaults to system temp dir')
     main(
         host=parser.parse_args().addr,
         port=parser.parse_args().port,

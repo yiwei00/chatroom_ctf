@@ -1,6 +1,5 @@
 import socket
 import threading
-import signal
 import time
 from datetime import datetime
 from collections import deque
@@ -73,7 +72,6 @@ class ChatServer:
         self.sock.bind((self.host, self.port))
         self.sock.listen(5)
         self.running = True
-        signal.signal(signal.SIGINT, self.interrupt_handler)
         # spawn a thread to accept clients
         self.accept_thread = threading.Thread(target=self.accept_client)
         self.accept_thread.start()
@@ -132,7 +130,9 @@ class ChatServer:
         # join accept thread
         self.accept_thread.join()
 
-    def interrupt_handler(self, sig, frame):
+    def stop(self):
+        if not self.running:
+            return
         self.logger.log("Interrupted. Stopping server.")
         with self._r_lock:
             self.running = False
