@@ -1,0 +1,19 @@
+[2023-04-24 19:06:51] Chatserver initialized with host=0.0.0.0, port=5000, max_clients=5
+[2023-04-24 19:06:57] Accepted connection from ('127.0.0.1', 53922)
+[2023-04-24 19:06:58] Client ('127.0.0.1', 53922) logged in as alice.
+[2023-04-24 19:06:58] Chatroom: alice has joined the chatroom.
+[2023-04-24 19:07:01] Accepted connection from ('127.0.0.1', 53936)
+[2023-04-24 19:07:02] Client ('127.0.0.1', 53936) logged in as bob.
+[2023-04-24 19:07:02] Chatroom: bob has joined the chatroom.
+[2023-04-24 19:07:16] Chatroom: bob: hey alice, this app suckssss!!1!! can't even send emjois :((((
+[2023-04-24 19:07:36] Chatroom: alice: yeah that sucks, but i heard they have a built in calculator, you can wrap math equations with $ and {} to evaluate them
+[2023-04-24 19:07:46] Chatroom: bob: so like 2 would be 2?
+[2023-04-24 19:07:51] Chatroom: alice: yeah
+[2023-04-24 19:07:53] Chatroom: bob: that didn't work
+[2023-04-24 19:08:01] Chatroom: alice: hmm kinda lame, wanna touch grass?
+[2023-04-24 19:08:11] Chatroom: bob: yeah this chat is boring me
+[2023-04-24 19:08:16] Client ('127.0.0.1', 53922) disconnected.
+[2023-04-24 19:08:16] Chatroom: alice has left the chat.
+[2023-04-24 19:08:17] Client ('127.0.0.1', 53936) disconnected.
+[2023-04-24 19:08:17] Chatroom: bob has left the chat.
+[2023-04-24 19:08:26] Interrupted. Stopping server.

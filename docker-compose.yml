@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  chatroom:
+    container_name: chatroom
+    ports:
+      - "5000:5000"
+    build:
+      context: .
+      dockerfile: Dockerfile
+        
