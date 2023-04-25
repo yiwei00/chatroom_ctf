@@ -7,10 +7,11 @@ EXPOSE 5000
 COPY vulnerable_app/*.py /app
 COPY log.txt /app/logs
 
-# Add command here to copy the flag file into the container
-# Since the vulnerability allows RCE, a reverse shell can be used to copy the flag
-# so the flag can be copied to anywhere in the container readable by the user
+# Add command here to plant the flag
+# Since the vulnerability allows RCE, and a reverse shell with root privelege is possible
+# it doesn't matter where the flag is located
 # COPY flag.txt /
+# RUN echo "flag" >> /etc/shadow
 
 WORKDIR /app
 
