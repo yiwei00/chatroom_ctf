@@ -10,8 +10,8 @@ COPY log.txt /app/logs
 # Add command here to plant the flag
 # Since the vulnerability allows RCE, and a reverse shell with root privelege is possible
 # it doesn't matter where the flag is located
-# COPY flag.txt /
-# RUN echo "flag" >> /etc/shadow
+# RUN echo "this is a flag" > /flag.txt
+# RUN echo "this is a flag" >> /etc/shadow
 
 WORKDIR /app
 
