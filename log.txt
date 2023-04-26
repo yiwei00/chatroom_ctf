@@ -5,15 +5,16 @@
 [2023-04-24 19:07:01] Accepted connection from ('127.0.0.1', 53936)
 [2023-04-24 19:07:02] Client ('127.0.0.1', 53936) logged in as bob.
 [2023-04-24 19:07:02] Chatroom: bob has joined the chatroom.
-[2023-04-24 19:07:16] Chatroom: bob: hey alice, this app suckssss!!1!! can't even send emjois :((((
-[2023-04-24 19:07:36] Chatroom: alice: yeah that sucks, but i heard they have a built in calculator, you can wrap math equations with $ and {} to evaluate them
-[2023-04-24 19:07:46] Chatroom: bob: so like 2 would be 2?
-[2023-04-24 19:07:51] Chatroom: alice: yeah
-[2023-04-24 19:07:53] Chatroom: bob: that didn't work
-[2023-04-24 19:08:01] Chatroom: alice: hmm must be a different app, wanna touch grass?
-[2023-04-24 19:08:11] Chatroom: bob: yeah this is boring me
-[2023-04-24 19:08:16] Client ('127.0.0.1', 53922) disconnected.
-[2023-04-24 19:08:16] Chatroom: alice has left the chat.
-[2023-04-24 19:08:17] Client ('127.0.0.1', 53936) disconnected.
-[2023-04-24 19:08:17] Chatroom: bob has left the chat.
-[2023-04-24 19:08:26] Interrupted. Stopping server.
+[2023-04-24 19:07:16] Chatroom: bob: hello alice! thanks for showing me this app.
+[2023-04-24 19:07:36] Chatroom: alice: hi bob! i'm very excited about the return of chatrooms. apparently this app uses some new python logging system called log4py, the module is suppose to be based on an older java library called log4j
+[2023-04-24 19:07:46] Chatroom: bob: log4j, that sounds familiar, wasn't it on the news a while back
+[2023-04-24 19:07:51] Chatroom: alice: yeah, i think it had some big vulenrability that allowed RCE
+[2023-04-24 19:07:53] Chatroom: bob: hmm hopefully a similar vulenrability isn't copied over to log4py
+[2023-04-24 19:08:01] Chatroom: alice: yeah that would definitely be bad wouldn't it?
+[2023-04-24 19:08:11] Chatroom: bob: oh for sure, hey wanna grab a drink at the bar?
+[2023-04-24 19:08:22] Chatroom: alice: sure, i'll meet you there in 5
+[2023-04-24 19:08:24] Client ('127.0.0.1', 53922) disconnected.
+[2023-04-24 19:08:24] Chatroom: alice has left the chat.
+[2023-04-24 19:08:25] Client ('127.0.0.1', 53936) disconnected.
+[2023-04-24 19:08:25] Chatroom: bob has left the chat.
+[2023-04-24 19:08:26] Stopping server.

@@ -10,7 +10,7 @@ TICKS_PER_SEC = 30
 HELP_MSG = b'''Commands:
     /help - show this message
     /quit - quit the chatroom
-    /logs - show the chat logs'''
+    /logs - show the log history for the current server'''
 
 class _ChatClient:
     def __init__(self, sock=None, addr=None, **kwargs) -> None:
@@ -133,7 +133,7 @@ class ChatServer:
     def stop(self):
         if not self.running:
             return
-        self.logger.log("Interrupted. Stopping server.")
+        self.logger.log("Stopping server.")
         with self._r_lock:
             self.running = False
 
@@ -241,6 +241,7 @@ class ChatServer:
                     if log_str[-1] == '\n':
                         log_str = log_str[:-1]
                     self.cl_sendall(client, log_str.encode('utf-8'))
+                    self.cl_sendall(client, b"End of logs. (Logged by Log4py)")
                 else:
                     self.cl_sendall(client, b"Unknown command. Use /help for a list of commands.")
             else:

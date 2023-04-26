@@ -31,10 +31,10 @@ def parse_exprs(expr_str):
                             found = True
                             try:
                                 evaluated = eval(to_parse[idx:i])
-                            except SyntaxError:
-                                out_msg += "(Invalid Expr)"
+                            except SyntaxError as e:
+                                out_msg += f"Unable to evaluate:\n{to_parse[idx:i]}\n$> Syntax Error: {e}"
                             except Exception as e:
-                                out_msg += "(Eval Error: {})".format(e)
+                                out_msg += f"Unable to evaluate:\n{to_parse[idx:i]}\n$> Eval Error: {e}"
                             else:
                                 out_msg += str(evaluated)
                             to_parse = to_parse[i+1:]
