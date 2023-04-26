@@ -1,9 +1,9 @@
-Installation should be simple, just run docker-compose up on the root directory of the project. The application will be available on port 5000.
-There should be a unique image per person, it should also be simple to reset so if someone accidentally messes up the image, they can recover the original image.
-The image is setup according to the specification for these type of challenges (theoretically).
+Installation is simple, just run docker-compose up on the root directory of the project. 
+The application will be available on port 5000.
+This is intended to be a dynamic challenge, specifically, a user is expected to gain a reverse shell with root priviledge to the ubuntu image on the container.
 
 The flag can be planted in any file on the system, but it should probably be somewhat obvious since the main part of the challenge is to figure out RCE on python.
-Since the container runs the python script as root, the flag can be planted anywhere on the system.
+Since the container runs the script as root, the flag can be planted anywhere on the system.
 By default the flag is planted as a .txt file in the root directory. Can also append it somewhere fun like /etc/shadow or /etc/passwd.
 
 To plant the flag simply uncomment the **one** of the related lines in the Dockerfile, and replace the flag string with the flag you want to use. Or even change the path as well.
